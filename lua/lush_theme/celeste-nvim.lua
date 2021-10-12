@@ -92,9 +92,9 @@ local theme = lush(function()
         Identifier {fg = colors.blue, gui = "italic"}, -- (preferred) any variable name
         Function {fg = colors.dark_orange, gui = "italic"}, -- function name (also: methods for classes)
         Statement {}, -- (preferred) any statement
-        Conditional {fg = colors.tel.darken(30), gui = "italic"}, --  if, then, else, endif, switch, etc.
-        Repeat {fg = colors.tel.darken(30), gui = "italic"}, --   for, do, while, etc.
-        Label {fg = colors.tel.darken(30), gui = "italic"}, --    case, default, etc.
+        Conditional {fg = colors.tel.darken(90), gui = "italic"}, --  if, then, else, endif, switch, etc.
+        Repeat {fg = colors.tel.darken(90), gui = "italic"}, --   for, do, while, etc.
+        Label {fg = colors.tel.darken(90), gui = "italic"}, --    case, default, etc.
         Operator {fg = colors.orange}, -- "sizeof", "+", "*", etc.
         Keyword {fg = colors.black}, --  any other keyword
         Exception {fg = colors.dark_orange, gui = "italic"}, --  try, catch, throw
@@ -167,10 +167,10 @@ local theme = lush(function()
             fg = colors.red.darken(30),
             gui = "italic,underline"
         }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        -- LspDiagnosticsUnderlineWarning {
-        --     fg = colors.yellow.darken(30),
-        --     gui = "italic,underline"
-        -- }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsUnderlineWarning {
+            fg = colors.yellow.darken(30),
+            gui = "italic,underline"
+        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
         LspDiagnosticsUnderlineInformation {
             fg = colors.blue.darken(30),
             gui = "italic,underline"
@@ -193,7 +193,7 @@ local theme = lush(function()
         TSCharacter {fg = colors.dark_brown}, -- For characters.
         TSComment {fg = colors.gray, gui = "italic"}, -- For comment blocks.
         TSConstructor {fg = colors.orange.darken(10), gui = "italic"}, -- For constructor calls and definitions: ` { }` in Lua, and Java constructors.
-        TSConditional {fg = colors.tel.darken(30), gui = "italic"}, -- For keywords related to conditionnals.
+        TSConditional {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords related to conditionnals.
         TSConstant {fg = colors.magenta.darken(60), gui = "italic"}, -- For constants
         TSConstBuiltin {fg = colors.dark_orange.darken(20), gui = "italic"}, -- For constant that are built in the language: `nil` in Lua.
         TSConstMacro {fg = colors.magenta.darken(60), gui = "italic"}, -- For constants that are defined by macros: `NULL` in C.
@@ -219,7 +219,7 @@ local theme = lush(function()
         -- TSPunctDelimiter     { };    -- For delimiters ie: `.`
         -- TSPunctBracket       { };    -- For brackets and parens.
         -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
-        TSRepeat {fg = colors.tel.darken(30), gui = "italic"}, -- For keywords related to loops.
+        TSRepeat {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords related to loops.
         TSString {fg = hsl(135, 62, 17), gui = "italic"}, -- For strings.
         TSStringRegex {fg = colors.brown.darken(30), gui = "italic"}, -- For regexes.
         TSStringEscape {fg = colors.yellow, gui = "italic"}, -- For escape characters within a string.
@@ -227,7 +227,7 @@ local theme = lush(function()
         TSType {fg = colors.blue.darken(50), gui = "italic"}, -- For types.
         TSTypeBuiltin {fg = colors.blue.darken(50), gui = "italic"}, -- For builtin types.
         TSVariable {fg = colors.blue}, -- Any variable name that does not have another highlight.
-        -- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
+        TSVariableBuiltin {fg = colors.purple.darken(70), gui = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
         TSTag {fg = colors.tel.darken(60), gui = "italic"}, -- Tags like html tag names.
         -- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
         TSText {fg = colors.black} -- For strings considered text in a markup language.
