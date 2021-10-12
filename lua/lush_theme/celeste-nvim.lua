@@ -25,7 +25,7 @@ local theme = lush(function()
         Comment {fg = colors.gray, gui = "italic"}, -- any comment
         -- ColorColumn  { }, -- used for the columns set with 'colorcolumn'
         -- Conceal      {}, -- placeholder characters substituted for concealed text (see 'conceallevel')
-        Cursor {bg = colors.magenta, fg = colors.white}, -- character under the cursor
+        Cursor {bg = colors.magenta, fg = colors.black}, -- character under the cursor
         lCursor {bg = colors.magenta, fg = colors.dark_brown}, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
         CursorIM {bg = colors.magenta}, -- like Cursor, but used when in IME mode |CursorIM|
         CursorColumn {bg = colors.light_gray}, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -84,7 +84,7 @@ local theme = lush(function()
         Whitespace {fg = colors.light_gray.darken(40)}, -- "nbsp", "space", "tab" and "trail" in 'listchars'
         WildMenu {bg = colors.blue.li(50), fg = colors.blue.darken(80)}, -- current match in 'wildmenu' completion
         Constant {fg = colors.magenta.darken(60), gui = "italic"}, -- (preferred) any constant
-        String {fg = colors.dark_brown, gui = "italic"}, --   a string constant: "this is a string"
+        String {fg = hsl(135, 62, 17), gui = "italic"}, --   a string constant: "this is a string"
         Character {fg = colors.dark_brown, gui = "italic"}, --  a character constant: 'c', '\n'
         Number {fg = colors.red}, --   a number constant: 234, 0xff
         Boolean {fg = colors.purple, gui = "italic"}, --  a boolean constant: TRUE, false
@@ -208,27 +208,27 @@ local theme = lush(function()
         TSKeyword {fg = colors.black}, -- For keywords that don't fall in previous categories.
         TSKeywordFunction {fg = colors.dark_orange.darken(80), gui = "italic"}, -- For keywords used to define a fuction.
         TSLabel {fg = colors.tel.darken(30), gui = "italic"}, -- For labels: `label:` in C and `:label:` in Lua.
-        -- TSMethod             { };    -- For method calls and definitions.
+        TSMethod {fg = colors.dark_orange.darken(30)}, -- For method calls and definitions.
         -- TSNamespace          { };    -- For identifiers referring to modules and namespaces.
         -- TSNone               { };    -- TODO: docs
         TSNumber {fg = colors.red}, -- For all numbers
         TSOperator {fg = colors.orange}, -- For any operator: `+`, but also `->` and `*` in C.
-        -- TSParameter          { };    -- For parameters of a function.
-        -- TSParameterReference { };    -- For references to parameters of a function.
+        TSParameter {fg = colors.green.darken(30)}, -- For parameters of a function.
+        TSParameterReference {fg = colors.green.darken(40)}, -- For references to parameters of a function.
         -- TSProperty           { };    -- Same as `TSField`.
         -- TSPunctDelimiter     { };    -- For delimiters ie: `.`
         -- TSPunctBracket       { };    -- For brackets and parens.
         -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
         TSRepeat {fg = colors.tel.darken(30), gui = "italic"}, -- For keywords related to loops.
-        TSString {fg = colors.dark_brown, gui = "italic"}, -- For strings.
+        TSString {fg = hsl(135, 62, 17), gui = "italic"}, -- For strings.
         TSStringRegex {fg = colors.brown.darken(30), gui = "italic"}, -- For regexes.
         TSStringEscape {fg = colors.yellow, gui = "italic"}, -- For escape characters within a string.
-        -- TSSymbol             { };    -- For identifiers referring to symbols or atoms.
-        -- TSType               { };    -- For types.
-        -- TSTypeBuiltin        { };    -- For builtin types.
+        TSSymbol {fg = colors.blue.darken(60)}, -- For identifiers referring to symbols or atoms.
+        TSType {fg = colors.blue.darken(50), gui = "italic"}, -- For types.
+        TSTypeBuiltin {fg = colors.blue.darken(50), gui = "italic"}, -- For builtin types.
         TSVariable {fg = colors.blue}, -- Any variable name that does not have another highlight.
         -- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
-        -- TSTag                { };    -- Tags like html tag names.
+        TSTag {fg = colors.tel.darken(60), gui = "italic"}, -- Tags like html tag names.
         -- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
         TSText {fg = colors.black} -- For strings considered text in a markup language.
         -- TSEmphasis           { };    -- For text to be represented with emphasis.
