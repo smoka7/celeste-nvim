@@ -90,7 +90,7 @@ local theme = lush(function()
         Boolean {fg = colors.purple, gui = "italic"}, --  a boolean constant: TRUE, false
         Float {fg = colors.red.darken(30)}, --    a floating point constant: 2.3e10
         Identifier {fg = colors.blue.darken(50), gui = "italic"}, -- (preferred) any variable name
-        Function {fg = colors.dark_orange}, -- function name (also: methods for classes)
+        Function {fg = colors.tel.darken(90)}, -- function name (also: methods for classes)
         Statement {}, -- (preferred) any statement
         Conditional {fg = colors.tel.darken(90), gui = "italic"}, --  if, then, else, endif, switch, etc.
         Repeat {fg = colors.tel.darken(90), gui = "italic"}, --   for, do, while, etc.
@@ -168,7 +168,7 @@ local theme = lush(function()
             gui = "italic,underline"
         }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
         LspDiagnosticsUnderlineWarning {
-            fg = colors.yellow.darken(30),
+            -- fg = colors.yellow.darken(30),
             gui = "italic,underline"
         }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
         LspDiagnosticsUnderlineInformation {
@@ -201,14 +201,14 @@ local theme = lush(function()
         TSException {fg = colors.dark_orange, gui = "italic"}, -- For exception related keywords.
         -- TSField              { };    -- For fields.
         TSFloat {fg = colors.red.darken(30)}, -- For floats.
-        TSFunction {fg = colors.dark_orange}, -- For function (calls and definitions).
+        TSFunction {fg = colors.tel.darken(90)}, -- For function (calls and definitions).
         TSFuncBuiltin {fg = colors.green.darken(30), gui = "italic"}, -- For builtin functions: `table.insert` in Lua.
         TSFuncMacro {fg = colors.dark_orange.darken(30), gui = "italic"}, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         -- TSInclude            { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSKeyword {fg = colors.black}, -- For keywords that don't fall in previous categories.
-        TSKeywordFunction {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords used to define a fuction.
+        TSKeywordFunction {fg = colors.dark_orange, gui = "italic"}, -- For keywords used to define a fuction.
         TSLabel {fg = colors.tel.darken(50), gui = "italic"}, -- For labels: `label:` in C and `:label:` in Lua.
-        TSMethod {fg = colors.orange.darken(90)}, -- For method calls and definitions.
+        TSMethod {fg = colors.tel.darken(70)}, -- For method calls and definitions.
         -- TSNamespace          { };    -- For identifiers referring to modules and namespaces.
         -- TSNone               { };    -- TODO: docs
         TSNumber {fg = colors.red}, -- For all numbers
