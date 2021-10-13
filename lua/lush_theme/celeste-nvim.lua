@@ -84,13 +84,13 @@ local theme = lush(function()
         Whitespace {fg = colors.light_gray.darken(40)}, -- "nbsp", "space", "tab" and "trail" in 'listchars'
         WildMenu {bg = colors.blue.li(50), fg = colors.blue.darken(80)}, -- current match in 'wildmenu' completion
         Constant {fg = colors.magenta.darken(60), gui = "italic"}, -- (preferred) any constant
-        String {fg = hsl(135, 62, 17), gui = "italic"}, --   a string constant: "this is a string"
+        String {fg = hsl(135, 62, 25), gui = "italic"}, --   a string constant: "this is a string"
         Character {fg = colors.dark_brown, gui = "italic"}, --  a character constant: 'c', '\n'
         Number {fg = colors.red}, --   a number constant: 234, 0xff
         Boolean {fg = colors.purple, gui = "italic"}, --  a boolean constant: TRUE, false
         Float {fg = colors.red.darken(30)}, --    a floating point constant: 2.3e10
-        Identifier {fg = colors.blue, gui = "italic"}, -- (preferred) any variable name
-        Function {fg = colors.dark_orange, gui = "italic"}, -- function name (also: methods for classes)
+        Identifier {fg = colors.blue.darken(50), gui = "italic"}, -- (preferred) any variable name
+        Function {fg = colors.dark_orange}, -- function name (also: methods for classes)
         Statement {}, -- (preferred) any statement
         Conditional {fg = colors.tel.darken(90), gui = "italic"}, --  if, then, else, endif, switch, etc.
         Repeat {fg = colors.tel.darken(90), gui = "italic"}, --   for, do, while, etc.
@@ -99,7 +99,7 @@ local theme = lush(function()
         Keyword {fg = colors.black}, --  any other keyword
         Exception {fg = colors.dark_orange, gui = "italic"}, --  try, catch, throw
         -- PreProc        { }, -- (preferred) generic Preprocessor
-        -- Include        { }, --  preprocessor #include
+        Include {fg = colors.purple.darken(30), gui = "italic"}, --  preprocessor #include
         -- Define         { }, --   preprocessor #define
         -- Macro          { }, --    same as Define
         -- PreCondit      { }, --  preprocessor #if, #else, #endif, etc.
@@ -201,14 +201,14 @@ local theme = lush(function()
         TSException {fg = colors.dark_orange, gui = "italic"}, -- For exception related keywords.
         -- TSField              { };    -- For fields.
         TSFloat {fg = colors.red.darken(30)}, -- For floats.
-        TSFunction {fg = colors.dark_orange, gui = "italic"}, -- For function (calls and definitions).
+        TSFunction {fg = colors.dark_orange}, -- For function (calls and definitions).
         TSFuncBuiltin {fg = colors.green.darken(30), gui = "italic"}, -- For builtin functions: `table.insert` in Lua.
         TSFuncMacro {fg = colors.dark_orange.darken(30), gui = "italic"}, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         -- TSInclude            { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSKeyword {fg = colors.black}, -- For keywords that don't fall in previous categories.
-        TSKeywordFunction {fg = colors.dark_orange.darken(80), gui = "italic"}, -- For keywords used to define a fuction.
-        TSLabel {fg = colors.tel.darken(30), gui = "italic"}, -- For labels: `label:` in C and `:label:` in Lua.
-        TSMethod {fg = colors.dark_orange.darken(30)}, -- For method calls and definitions.
+        TSKeywordFunction {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords used to define a fuction.
+        TSLabel {fg = colors.tel.darken(50), gui = "italic"}, -- For labels: `label:` in C and `:label:` in Lua.
+        TSMethod {fg = colors.orange.darken(90)}, -- For method calls and definitions.
         -- TSNamespace          { };    -- For identifiers referring to modules and namespaces.
         -- TSNone               { };    -- TODO: docs
         TSNumber {fg = colors.red}, -- For all numbers
@@ -220,7 +220,7 @@ local theme = lush(function()
         -- TSPunctBracket       { };    -- For brackets and parens.
         -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
         TSRepeat {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords related to loops.
-        TSString {fg = hsl(135, 62, 17), gui = "italic"}, -- For strings.
+        TSString {fg = hsl(135, 62, 25), gui = "italic"}, -- For strings.
         TSStringRegex {fg = colors.brown.darken(30), gui = "italic"}, -- For regexes.
         TSStringEscape {fg = colors.yellow, gui = "italic"}, -- For escape characters within a string.
         TSSymbol {fg = colors.blue.darken(60)}, -- For identifiers referring to symbols or atoms.
