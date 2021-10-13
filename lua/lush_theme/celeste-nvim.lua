@@ -228,7 +228,7 @@ local theme = lush(function()
         TSTypeBuiltin {fg = colors.blue.darken(50), gui = "italic"}, -- For builtin types.
         TSVariable {fg = colors.blue}, -- Any variable name that does not have another highlight.
         TSVariableBuiltin {fg = colors.purple.darken(70), gui = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
-        TSTag {fg = colors.tel.darken(60), gui = "italic"}, -- Tags like html tag names.
+        TSTag {fg = colors.tel.darken(90), gui = "italic"}, -- Tags like html tag names.
         -- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
         TSText {fg = colors.black} -- For strings considered text in a markup language.
         -- TSEmphasis           { };    -- For text to be represented with emphasis.
