@@ -20,7 +20,8 @@ local colors = {
     black = "black",
     white = hsl(105, 55, 96)
 }
-local theme = lush(function()
+local theme = lush(
+              function()
     return {
         Comment {fg = colors.gray, gui = "italic"}, -- any comment
         -- ColorColumn  { }, -- used for the columns set with 'colorcolumn'
@@ -64,11 +65,7 @@ local theme = lush(function()
         -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
         Search {bg = colors.yellow, fg = colors.dark_brown}, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-        SpellBad {
-            fg = colors.dark_orange,
-            bg = colors.orange.li(70),
-            gui = "undercurl"
-        }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
+        SpellBad {fg = colors.dark_orange, bg = colors.orange.li(70), gui = "undercurl"}, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
         -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
@@ -84,7 +81,7 @@ local theme = lush(function()
         Whitespace {fg = colors.light_gray.darken(40)}, -- "nbsp", "space", "tab" and "trail" in 'listchars'
         WildMenu {bg = colors.blue.li(50), fg = colors.blue.darken(80)}, -- current match in 'wildmenu' completion
         Constant {fg = colors.magenta.darken(60), gui = "italic"}, -- (preferred) any constant
-        String {fg = hsl(135, 62, 25), gui = "italic"}, --   a string constant: "this is a string"
+        String {fg = hsl(135, 62, 25)}, --   a string constant: "this is a string"
         Character {fg = colors.dark_brown, gui = "italic"}, --  a character constant: 'c', '\n'
         Number {fg = colors.red}, --   a number constant: 234, 0xff
         Boolean {fg = colors.purple, gui = "italic"}, --  a boolean constant: TRUE, false
@@ -114,7 +111,8 @@ local theme = lush(function()
         SpecialComment {fg = colors.blue.darken(40), gui = "italic"}, -- special things inside a comment
         -- Debug          { }, --    debugging statements
         Underlined {gui = "underline,italic"}, -- (preferred) text that stands out, HTML links
-        Bold {gui = "bold"}, Italic {gui = "italic"},
+        Bold {gui = "bold"},
+        Italic {gui = "italic"},
         -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
         Error {bg = colors.red.darken(20), fg = colors.white, gui = "italic"}, -- (preferred) any erroneous construct
         Todo {bg = colors.yellow.darken(20), fg = colors.black, gui = "italic"}, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
@@ -126,59 +124,22 @@ local theme = lush(function()
         -- LspReferenceRead                     { }, -- used for highlighting "read" references
         -- LspReferenceWrite                    { }, -- used for highlighting "write" references
 
-        LspDiagnosticsDefaultError {
-            bg = colors.red.li(60),
-            fg = colors.red.darken(30),
-            gui = "italic"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        LspDiagnosticsDefaultWarning {
-            bg = colors.yellow.li(60),
-            fg = colors.yellow.darken(50),
-            gui = "italic"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        LspDiagnosticsDefaultInformation {
-            bg = colors.blue.li(60),
-            fg = colors.blue.darken(30),
-            gui = "italic"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        LspDiagnosticsDefaultHint {
-            bg = colors.green.li(60),
-            fg = colors.green.darken(30),
-            gui = "italic"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsDefaultError {bg = colors.red.li(60), fg = colors.red.darken(30)}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsDefaultWarning {bg = colors.yellow.li(60), fg = colors.yellow.darken(50)}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsDefaultInformation {bg = colors.blue.li(60), fg = colors.blue.darken(30)}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsDefaultHint {bg = colors.green.li(60), fg = colors.green.darken(30)}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-        LspDiagnosticsVirtualTextError {
-            bg = colors.red.li(60),
-            fg = colors.red.darken(30)
-        }, -- Used for "Error" diagnostic virtual text
-        LspDiagnosticsVirtualTextWarning {
-            bg = colors.yellow.li(60),
-            fg = colors.yellow.darken(50)
-        }, -- Used for "Warning" diagnostic virtual text
-        LspDiagnosticsVirtualTextInformation {
-            bg = colors.blue.li(60),
-            fg = colors.blue.darken(30)
-        }, -- Used for "Information" diagnostic virtual text
-        LspDiagnosticsVirtualTextHint {
-            bg = colors.green.li(60),
-            fg = colors.green.darken(30)
-        }, -- Used for "Hint" diagnostic virtual text
-        LspDiagnosticsUnderlineError {
-            fg = colors.red.darken(30),
-            gui = "italic,underline"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsVirtualTextError {bg = colors.red.li(60), fg = colors.red.darken(30)}, -- Used for "Error" diagnostic virtual text
+        LspDiagnosticsVirtualTextWarning {bg = colors.yellow.li(60), fg = colors.yellow.darken(50)}, -- Used for "Warning" diagnostic virtual text
+        LspDiagnosticsVirtualTextInformation {bg = colors.blue.li(60), fg = colors.blue.darken(30)}, -- Used for "Information" diagnostic virtual text
+        LspDiagnosticsVirtualTextHint {bg = colors.green.li(60), fg = colors.green.darken(30)}, -- Used for "Hint" diagnostic virtual text
+        LspDiagnosticsUnderlineError {fg = colors.red.darken(30), gui = "underline"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
         LspDiagnosticsUnderlineWarning {
-            -- fg = colors.yellow.darken(30),
-            gui = "italic,underline"
+            fg = colors.yellow.darken(30),
+            gui = "underline"
         }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        LspDiagnosticsUnderlineInformation {
-            fg = colors.blue.darken(30),
-            gui = "italic,underline"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-        LspDiagnosticsUnderlineHint {
-            fg = colors.green.darken(30),
-            gui = "italic,underline"
-        }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsUnderlineInformation {fg = colors.blue.darken(30), gui = "underline"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+        LspDiagnosticsUnderlineHint {fg = colors.green.darken(30), gui = "underline"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
         -- LspDiagnosticsFloatingError          { }, -- Used to color "Error" diagnostic messages in diagnostics float
         -- LspDiagnosticsFloatingWarning        { }, -- Used to color "Warning" diagnostic messages in diagnostics float
         -- LspDiagnosticsFloatingInformation    { }, -- Used to color "Information" diagnostic messages in diagnostics float
@@ -220,7 +181,7 @@ local theme = lush(function()
         -- TSPunctBracket       { };    -- For brackets and parens.
         -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
         TSRepeat {fg = colors.tel.darken(90), gui = "italic"}, -- For keywords related to loops.
-        TSString {fg = hsl(135, 62, 25), gui = "italic"}, -- For strings.
+        TSString {fg = hsl(135, 62, 25)}, -- For strings.
         TSStringRegex {fg = colors.brown.darken(30), gui = "italic"}, -- For regexes.
         TSStringEscape {fg = colors.yellow, gui = "italic"}, -- For escape characters within a string.
         TSSymbol {fg = colors.blue.darken(60)}, -- For identifiers referring to symbols or atoms.
@@ -239,7 +200,8 @@ local theme = lush(function()
         -- TSURI                { };    -- Any URI like a link or email.
 
     }
-end)
+end
+              )
 
 -- return our parsed theme for extension or use else where.
 return theme
