@@ -43,7 +43,7 @@ highlight TSTypeBuiltin guifg=#124864 guibg=NONE guisp=NONE gui=italic blend=NON
 highlight Cursor guifg=black guibg=#FF4D97 guisp=NONE gui=NONE blend=NONE
 highlight Structure guifg=#1C719C guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic blend=NONE
-highlight String guifg=#18672C guibg=NONE guisp=NONE gui=italic blend=NONE
+highlight String guifg=#18672C guibg=NONE guisp=NONE blend=NONE
 highlight TSSymbol guifg=#0E394E guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight IncSearch guifg=#F55C3D guibg=#FFEB85 guisp=NONE gui=NONE blend=NONE
 highlight TSStringEscape guifg=#FFDD33 guibg=NONE guisp=NONE gui=italic blend=NONE
@@ -55,9 +55,9 @@ highlight DiffDelete guifg=#B11623 guibg=#F5ADB3 guisp=NONE gui=NONE blend=NONE
 highlight StatusLine guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
 highlight TSRepeat guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSParameterReference guifg=#157525 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight LspDiagnosticsUnderlineInformation guifg=#18658B guibg=NONE guisp=NONE gui=italic,underline blend=NONE
+highlight LspDiagnosticsUnderlineInformation guifg=#18658B guibg=NONE guisp=NONE gui=underline blend=NONE
 highlight NormalNC guifg=#333333 guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
-highlight LspDiagnosticsUnderlineHint guifg=#188B2C guibg=NONE guisp=NONE gui=italic,underline blend=NONE
+highlight LspDiagnosticsUnderlineHint guifg=#188B2C guibg=NONE guisp=NONE gui=underline blend=NONE
 highlight Visual guifg=#FFE770 guibg=#333333 guisp=NONE gui=NONE blend=NONE
 highlight TSParameter guifg=#188B2C guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSOperator guifg=#F58A3D guibg=NONE guisp=NONE gui=NONE blend=NONE
