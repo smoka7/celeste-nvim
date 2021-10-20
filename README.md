@@ -1,6 +1,7 @@
 # Celeste-nvim
 
-Celeste-nvim is a light colorscheme for vim and vim.
+Celeste-nvim is a light colorscheme for neovim and vim.
+![colorscheme Screenshot](/colors/Screenshot.png)
 
 ## Installation
 
