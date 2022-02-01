@@ -49,9 +49,9 @@ highlight Italic guifg=NONE guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight Keyword guifg=black guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Label guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight LineNr guifg=#666666 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight Normal guifg=black guibg=#E1E2E7 guisp=NONE gui=NONE blend=NONE
+highlight Normal guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
 highlight NormalFloat guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
-highlight NormalNC guifg=#333333 guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
+highlight NormalNC guifg=#333333 guibg=#E2E9E7 guisp=NONE gui=NONE blend=NONE
 highlight Number guifg=#E63746 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Operator guifg=#F58A3D guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Pmenu guifg=#F2FAEF guibg=#333333 guisp=NONE gui=NONE blend=NONE
@@ -61,7 +61,8 @@ highlight PmenuThumb guifg=NONE guibg=#2B9FDA guisp=NONE gui=NONE blend=NONE
 highlight Question guifg=#188B2C guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Repeat guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight Search guifg=#634D36 guibg=#FFDD33 guisp=NONE gui=NONE blend=NONE
-highlight SignColumn guifg=NONE guibg=#E1E2E7 guisp=NONE gui=NONE blend=NONE
+highlight SignColumn NONE
+highlight link SignColumn Normal
 highlight SpecialComment guifg=#155575 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight SpellBad guifg=#F55C3D guibg=#FCDCC5 guisp=NONE gui=undercurl blend=NONE
 highlight Statement guifg=NONE guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -147,3 +148,26 @@ highlight! CmpItemKindText guibg=NONE guifg=#9CDCFE
 highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
 highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
 highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
+
+highlight TelescopeNormal guibg=#d6dde1 guifg=#071C27
+highlight TelescopeBorder NONE
+highlight TelescopeMatching guifg=#e91e63
+highlight TelescopePreviewBorder NONE
+highlight TelescopePreviewNormal NONE
+highlight TelescopePreviewTitle NONE
+highlight link TelescopePreviewBorder Normal
+highlight link TelescopePreviewTitle Normal
+highlight link TelescopePreviewNormal Normal
+highlight TelescopePromptNormal guifg=#d6dde1 guibg=#071C27
+highlight TelescopePromptBorder guifg=#d6dde1 guibg=#071C27
+highlight TelescopePromptCounter guifg=#d6dde1 guibg=#071C27
+highlight TelescopePromptPrefix guifg=#d6dde1 guibg=#071C27
+highlight TelescopePromptTitle guifg=#d6dde1 guibg=#071C27
+
+
+highlight WhichKey  guifg=#FFDD33 guibg=#202328
+highlight WhichKeySeparator guifg=#FFDD44 guibg=#202328
+highlight WhichKeyGroup guifg=#A0EEAD guibg=#202328
+highlight WhichKeyDesc guifg=#F5ADB3 guibg=#202328
+highlight WhichKeyFloat guifg=#d6dde1 guibg=#202328
+highlight WhichKeyValue guifg=#d6dde1 guibg=#202328
