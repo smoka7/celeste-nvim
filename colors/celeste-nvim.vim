@@ -51,7 +51,7 @@ highlight Label guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight LineNr guifg=#666666 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Normal guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
 highlight NormalFloat guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
-highlight NormalNC guifg=#333333 guibg=#E2E9E7 guisp=NONE gui=NONE blend=NONE
+" highlight NormalNC guifg=#333333 guibg=#E2E9E7 guisp=NONE gui=NONE blend=NONE
 highlight Number guifg=#E63746 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Operator guifg=#F58A3D guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Pmenu guifg=#F2FAEF guibg=#333333 guisp=NONE gui=NONE blend=NONE
@@ -149,7 +149,7 @@ highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
 highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
 highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
 
-highlight TelescopeNormal guibg=#d6dde1 guifg=#071C27
+highlight TelescopeNormal guibg=#d6dde1 guifg=#202328
 highlight TelescopeBorder NONE
 highlight TelescopeMatching guifg=#e91e63
 highlight TelescopePreviewBorder NONE
@@ -158,11 +158,11 @@ highlight TelescopePreviewTitle NONE
 highlight link TelescopePreviewBorder Normal
 highlight link TelescopePreviewTitle Normal
 highlight link TelescopePreviewNormal Normal
-highlight TelescopePromptNormal guifg=#d6dde1 guibg=#071C27
-highlight TelescopePromptBorder guifg=#d6dde1 guibg=#071C27
-highlight TelescopePromptCounter guifg=#d6dde1 guibg=#071C27
-highlight TelescopePromptPrefix guifg=#d6dde1 guibg=#071C27
-highlight TelescopePromptTitle guifg=#d6dde1 guibg=#071C27
+highlight TelescopePromptNormal guifg=#d6dde1 guibg=#202328
+highlight TelescopePromptBorder guifg=#d6dde1 guibg=#202328
+highlight TelescopePromptCounter guifg=#d6dde1 guibg=#202328
+highlight TelescopePromptPrefix guifg=#d6dde1 guibg=#202328
+highlight TelescopePromptTitle guifg=#d6dde1 guibg=#202328
 
 
 highlight WhichKey  guifg=#FFDD33 guibg=#202328
@@ -171,3 +171,31 @@ highlight WhichKeyGroup guifg=#A0EEAD guibg=#202328
 highlight WhichKeyDesc guifg=#F5ADB3 guibg=#202328
 highlight WhichKeyFloat guifg=#d6dde1 guibg=#202328
 highlight WhichKeyValue guifg=#d6dde1 guibg=#202328
+
+highlight NvimTreeNormal NONE
+highlight NvimTreeVertSplit guifg=#F2FAEF
+highlight link NvimTreeNormal TelescopePromptNormal
+highlight NvimTreeCursorLine guibg=#F2FAEF guifg=#202328
+
+highlight NvimTreeEmptyFolderName guifg=#F2FAEF guibg=#202328
+highlight NvimTreeExecFile guifg=#e91e63 guibg=#202328
+highlight NvimTreeFolderIcon guifg=#FFDF44 guibg=#202328
+highlight NvimTreeFolderName guifg=#76d1ff
+highlight link NvimTreeOpenedFolderName NvimTreeFolderName
+highlight NvimTreeImageFile guifg=#A0EEAD guibg=#202328
+highlight NvimTreeIndentMarker guifg=202328 guibg=#202328
+highlight NvimTreeMarkdownFile guifg=#F2FAEF guibg=#202328
+highlight NvimTreeOpenedFile guifg=#FFDD33 guibg=#202328
+highlight NvimTreeRootFolder guifg=#8c67c9 guibg=#202328
+highlight NvimTreeSpecialFile guifg=#FFEE99 guibg=#202328
+highlight NvimTreeSymlink guifg=#90EaAd guibg=#202328
+
+
+highlight NvimTreeGitDirty guifg=#f5adb3 guibg=#202328
+highlight NvimTreeGitStaged guifg=#A0D4EE guibg=#202328
+highlight NvimTreeGitMerge guifg=#90EaAd guibg=#202328
+highlight NvimTreeGitRenamed guifg=#8c67c9 guibg=#202328
+highlight NvimTreeGitNew guifg=#FAee99 guibg=#202328
+highlight NvimTreeGitDeleted guifg=#e91e63 guibg=#202328
+
+highlight NvimTreeWindowPicker guifg=#202328 guibg=#A0EEAD
