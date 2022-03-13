@@ -75,7 +75,7 @@ highlight TSAnnotation guifg=#470CA7 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSAttribute guifg=#330877 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSBoolean guifg=#470CA7 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSCharacter guifg=#634D36 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight TSComment guifg=#666666 guibg=NONE guisp=NONE gui=italic blend=NONE
+highlight link TSComment Comment
 highlight TSConditional guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSConstBuiltin guifg=#E9310C guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSConstMacro guifg=#850037 guibg=NONE guisp=NONE gui=italic blend=NONE
@@ -130,10 +130,10 @@ highlight DiagnosticSignError guifg=#B11623 guibg=NONE guisp=NONE gui=NONE blend
 highlight DiagnosticSignHint guifg=#188B2C guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
 highlight DiagnosticSignInformation guifg=#18658B guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight DiagnosticSignWarning guifg=#D6B300 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=NONE gui=italic,underline blend=NONE
-highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=NONE gui=underline blend=NONE
-highlight DiagnosticUnderlineInformation guifg=NONE guibg=NONE guisp=NONE gui=underline blend=NONE
-highlight DiagnosticUnderlineWarning guifg=NONE guibg=NONE guisp=NONE gui=italic,underline blend=NONE
+highlight DiagnosticUnderlineError guifg=NONE guibg=NONE guisp=NONE gui=italic blend=NONE
+highlight DiagnosticUnderlineHint guifg=NONE guibg=NONE guisp=NONE blend=NONE
+highlight DiagnosticUnderlineInformation guifg=NONE guibg=NONE guisp=NONE blend=NONE
+highlight DiagnosticUnderlineWarning guifg=NONE guibg=NONE guisp=NONE blend=NONE
 highlight DiagnosticVirtualTextError guifg=#B11623 guibg=#F5ADB3 guisp=NONE gui=NONE blend=NONE
 highlight DiagnosticVirtualTextHint guifg=#188B2C guibg=#A0EEAD guisp=NONE gui=NONE blend=NONE
 highlight DiagnosticVirtualTextInformation guifg=#18658B guibg=#A0D4EE guisp=NONE gui=NONE blend=NONE
