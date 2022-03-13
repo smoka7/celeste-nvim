@@ -199,3 +199,7 @@ highlight NvimTreeGitNew guifg=#FAee99 guibg=#202328
 highlight NvimTreeGitDeleted guifg=#e91e63 guibg=#202328
 
 highlight NvimTreeWindowPicker guifg=#202328 guibg=#A0EEAD
+
+highlight HopNextKey guifg=#FFDD22
+highlight HopNextKey1 guifg=#22c33D
+highlight HopNextKey2 guifg=#330877
