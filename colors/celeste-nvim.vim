@@ -1,24 +1,8 @@
-" You probably always want to set this in your vim file
 set background=light
 let g:colors_name="celeste-nvim"
 
-" By setting our module to nil, we clear lua's cache,
-" which means the require ahead will *always* occur.
-"
-" This isn't strictly required but it can be a useful trick if you are
-" incrementally editing your config a lot and want to be sure your themes
-" changes are being picked up without restarting neovim.
-"
-" Note if you're working in on your theme and have :Lushify'd the buffer,
-" your changes will be applied with our without the following line.
-"
-" The performance impact of this call can be measured in the hundreds of
-" *nanoseconds* and such could be considered "production safe".
-lua package.loaded['lush_theme.celeste-nvim'] = nil
+" lua package.loaded['lush_theme.celeste-nvim'] = nil
 
-" include our theme file and pass it to lush to apply
-" lua require('lush')(require('lush_theme.celeste-nvim'))
-"Theme built with Lush.nvim, exported at Sun 17 Oct 2021 11:01:40 AM +0330
 highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold blend=NONE
 highlight Boolean guifg=#470CA7 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight Character guifg=#634D36 guibg=NONE guisp=NONE gui=italic blend=NONE
@@ -95,7 +79,8 @@ highlight TSNumber guifg=#E63746 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSOperator guifg=#F58A3D guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSParameter guifg=#188B2C guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSParameterReference guifg=#157525 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight TSRepeat guifg=#041613 guibg=NONE guisp=NONE gui=italic blend=NONE
+highlight TSRepeat NONE
+highlight link TSRepeat Repeat
 highlight TSString guifg=#18672C guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSStringEscape guifg=#FFDD33 guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight TSStringRegex guifg=#6A5239 guibg=NONE guisp=NONE gui=italic blend=NONE
@@ -141,15 +126,27 @@ highlight DiagnosticVirtualTextWarning guifg=#998000 guibg=#FFF1AD guisp=NONE gu
 
 highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#808080
 highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6
-highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6
-highlight! CmpItemKindVariable guibg=NONE guifg=#9CDCFE
+highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#e91e63
+highlight! CmpItemMenu guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindClass guibg=NONE guifg=#1F81B2
+highlight! CmpItemKindConstant guibg=NONE guifg=#850037
+highlight! CmpItemKindConstructor guibg=NONE guifg=#F37820
+highlight! CmpItemKindEnum guibg=NONE guifg=#1C719C
+highlight! CmpItemKindFile guibg=NONE guifg=#ffee99
+highlight! CmpItemKindFunction guibg=NONE guifg=#F55C3D
 highlight! CmpItemKindInterface guibg=NONE guifg=#9CDCFE
-highlight! CmpItemKindText guibg=NONE guifg=#9CDCFE
-highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
+highlight! CmpItemKindKeyword guibg=NONE guifg=#F5CC00
 highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
-highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
+highlight! CmpItemKindModule guibg=NONE guifg=#470Ca7
+highlight! CmpItemKindProperty guibg=NONE guifg=#FFA8CC
+highlight! CmpItemKindSnippet guibg=NONE guifg=#ffe770
+highlight! CmpItemKindStruct guibg=NONE guifg=#FFDD33
+highlight! CmpItemKindText guibg=NONE guifg=#A0EEAD
+highlight! CmpItemKindTypeParameter guibg=NONE guifg=#188b2c
+highlight! CmpItemKindValue guibg=NONE guifg=#124864
+highlight! CmpItemKindVariable guibg=NONE guifg=#8c67c9
 
-highlight TelescopeNormal guibg=#d6dde1 guifg=#202328
+highlight TelescopeNormal guibg=#d6dde1 guifg=#292e42
 highlight TelescopeBorder NONE
 highlight TelescopeMatching guifg=#e91e63
 highlight TelescopePreviewBorder NONE
@@ -158,47 +155,47 @@ highlight TelescopePreviewTitle NONE
 highlight link TelescopePreviewBorder Normal
 highlight link TelescopePreviewTitle Normal
 highlight link TelescopePreviewNormal Normal
-highlight TelescopePromptNormal guifg=#d6dde1 guibg=#202328
-highlight TelescopePromptBorder guifg=#d6dde1 guibg=#202328
-highlight TelescopePromptCounter guifg=#d6dde1 guibg=#202328
-highlight TelescopePromptPrefix guifg=#d6dde1 guibg=#202328
-highlight TelescopePromptTitle guifg=#d6dde1 guibg=#202328
+highlight TelescopePromptNormal guifg=#d6dde1 guibg=#292e42
+highlight TelescopePromptBorder guifg=#d6dde1 guibg=#292e42
+highlight TelescopePromptCounter guifg=#d6dde1 guibg=#292e42
+highlight TelescopePromptPrefix guifg=#d6dde1 guibg=#292e42
+highlight TelescopePromptTitle guifg=#d6dde1 guibg=#292e42
 
 
-highlight WhichKey  guifg=#FFDD33 guibg=#202328
-highlight WhichKeySeparator guifg=#FFDD44 guibg=#202328
-highlight WhichKeyGroup guifg=#A0EEAD guibg=#202328
-highlight WhichKeyDesc guifg=#F5ADB3 guibg=#202328
-highlight WhichKeyFloat guifg=#d6dde1 guibg=#202328
-highlight WhichKeyValue guifg=#d6dde1 guibg=#202328
+highlight WhichKey  guifg=#FFDD33 guibg=#292e42
+highlight WhichKeySeparator guifg=#FFDD44 guibg=#292e42
+highlight WhichKeyGroup guifg=#A0EEAD guibg=#292e42
+highlight WhichKeyDesc guifg=#F5ADB3 guibg=#292e42
+highlight WhichKeyFloat guifg=#d6dde1 guibg=#292e42
+highlight WhichKeyValue guifg=#d6dde1 guibg=#292e42
 
 highlight NvimTreeNormal NONE
 highlight NvimTreeVertSplit guifg=#F2FAEF
 highlight link NvimTreeNormal TelescopePromptNormal
-highlight NvimTreeCursorLine guibg=#F2FAEF guifg=#202328
+highlight NvimTreeCursorLine guibg=#F2FAEF guifg=#292e42
 
-highlight NvimTreeEmptyFolderName guifg=#F2FAEF guibg=#202328
-highlight NvimTreeExecFile guifg=#e91e63 guibg=#202328
-highlight NvimTreeFolderIcon guifg=#FFDF44 guibg=#202328
+highlight NvimTreeEmptyFolderName guifg=#F2FAEF guibg=#292e42
+highlight NvimTreeExecFile guifg=#e91e63 guibg=#292e42
+highlight NvimTreeFolderIcon guifg=#FFDF44 guibg=#292e42
 highlight NvimTreeFolderName guifg=#76d1ff
 highlight link NvimTreeOpenedFolderName NvimTreeFolderName
-highlight NvimTreeImageFile guifg=#A0EEAD guibg=#202328
-highlight NvimTreeIndentMarker guifg=202328 guibg=#202328
-highlight NvimTreeMarkdownFile guifg=#F2FAEF guibg=#202328
-highlight NvimTreeOpenedFile guifg=#FFDD33 guibg=#202328
-highlight NvimTreeRootFolder guifg=#8c67c9 guibg=#202328
-highlight NvimTreeSpecialFile guifg=#FFEE99 guibg=#202328
-highlight NvimTreeSymlink guifg=#90EaAd guibg=#202328
+highlight NvimTreeImageFile guifg=#A0EEAD guibg=#292e42
+highlight NvimTreeIndentMarker guifg=202328 guibg=#292e42
+highlight NvimTreeMarkdownFile guifg=#F2FAEF guibg=#292e42
+highlight NvimTreeOpenedFile guifg=#FFDD33 guibg=#292e42
+highlight NvimTreeRootFolder guifg=#8c67c9 guibg=#292e42
+highlight NvimTreeSpecialFile guifg=#FFEE99 guibg=#292e42
+highlight NvimTreeSymlink guifg=#90EaAd guibg=#292e42
 
 
-highlight NvimTreeGitDirty guifg=#f5adb3 guibg=#202328
-highlight NvimTreeGitStaged guifg=#A0D4EE guibg=#202328
-highlight NvimTreeGitMerge guifg=#90EaAd guibg=#202328
-highlight NvimTreeGitRenamed guifg=#8c67c9 guibg=#202328
-highlight NvimTreeGitNew guifg=#FAee99 guibg=#202328
-highlight NvimTreeGitDeleted guifg=#e91e63 guibg=#202328
+highlight NvimTreeGitDirty guifg=#f5adb3 guibg=#292e42
+highlight NvimTreeGitStaged guifg=#A0D4EE guibg=#292e42
+highlight NvimTreeGitMerge guifg=#90EaAd guibg=#292e42
+highlight NvimTreeGitRenamed guifg=#8c67c9 guibg=#292e42
+highlight NvimTreeGitNew guifg=#FAee99 guibg=#292e42
+highlight NvimTreeGitDeleted guifg=#e91e63 guibg=#292e42
 
-highlight NvimTreeWindowPicker guifg=#202328 guibg=#A0EEAD
+highlight NvimTreeWindowPicker guifg=#292e42 guibg=#A0EEAD
 
 highlight HopNextKey guifg=#FFDD22
 highlight HopNextKey1 guifg=#22c33D
