@@ -48,7 +48,7 @@ highlight Search guifg=#634D36 guibg=#FFDD33 guisp=NONE gui=NONE blend=NONE
 highlight SignColumn NONE
 highlight link SignColumn Normal
 highlight SpecialComment guifg=#155575 guibg=NONE guisp=NONE gui=italic blend=NONE
-highlight SpellBad guifg=#F55C3D guibg=#FCDCC5 guisp=NONE gui=undercurl blend=NONE
+highlight SpellBad  guibg=#FCDCC5 guisp=NONE gui=undercurl blend=NONE
 highlight Statement guifg=NONE guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight StatusLine guifg=black guibg=#F2FAEF guisp=NONE gui=NONE blend=NONE
 highlight StorageClass guifg=#1F81B2 guibg=NONE guisp=NONE gui=italic blend=NONE
@@ -127,10 +127,12 @@ highlight DiagnosticVirtualTextWarning guifg=#998000 guibg=#FFF1AD guisp=NONE gu
 highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#808080
 highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6
 highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#e91e63
+highlight! CmpItemAbbrDefault guibg=NONE guifg=#F2FAEF
 highlight! CmpItemMenu guibg=NONE guifg=#D4D4D4
 highlight! CmpItemKindClass guibg=NONE guifg=#1F81B2
 highlight! CmpItemKindConstant guibg=NONE guifg=#850037
 highlight! CmpItemKindConstructor guibg=NONE guifg=#F37820
+highlight! CmpItemKindDefault guibg=NONE guifg=#1C719C
 highlight! CmpItemKindEnum guibg=NONE guifg=#1C719C
 highlight! CmpItemKindFile guibg=NONE guifg=#ffee99
 highlight! CmpItemKindFunction guibg=NONE guifg=#F55C3D
@@ -187,15 +189,24 @@ highlight NvimTreeRootFolder guifg=#8c67c9 guibg=#292e42
 highlight NvimTreeSpecialFile guifg=#FFEE99 guibg=#292e42
 highlight NvimTreeSymlink guifg=#90EaAd guibg=#292e42
 
+highlight NvimTreeLspDiagnosticsError guifg=#F5adb3
+highlight NvimTreeLspDiagnosticsHint guifg=#90eaad
+highlight NvimTreeLspDiagnosticsInformation guifg=#a0d4ee
+highlight NvimTreeLspDiagnosticsWarning guifg=#faee99
 
-highlight NvimTreeGitDirty guifg=#f5adb3 guibg=#292e42
-highlight NvimTreeGitStaged guifg=#A0D4EE guibg=#292e42
-highlight NvimTreeGitMerge guifg=#90EaAd guibg=#292e42
-highlight NvimTreeGitRenamed guifg=#8c67c9 guibg=#292e42
-highlight NvimTreeGitNew guifg=#FAee99 guibg=#292e42
-highlight NvimTreeGitDeleted guifg=#e91e63 guibg=#292e42
-
+highlight NvimTreeGitDirty guifg=#f5adb3
+highlight NvimTreeGitStaged guifg=#A0D4EE
+highlight NvimTreeGitMerge guifg=#90EaAd
+highlight NvimTreeGitRenamed guifg=#8c67c9
+highlight NvimTreeGitNew guifg=#FAee99
+highlight NvimTreeGitDeleted guifg=#e91e63
+ 
 highlight NvimTreeWindowPicker guifg=#292e42 guibg=#A0EEAD
+
+highlight NeogitNotificationInfo guifg=#80ff95 guibg=#292e42
+highlight NeogitNotificationWarning guifg=#fff454 guibg=#292e42
+highlight NeogitNotificationError guifg=#f5adb3 guibg=#292e42
+
 
 highlight HopNextKey guifg=#FFDD22
 highlight HopNextKey1 guifg=#22c33D
